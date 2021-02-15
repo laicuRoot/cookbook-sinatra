@@ -12,5 +12,5 @@ end
 # (and other HTTP verbs as we'll see...) method
 
 get '/' do
-  'My first sinatra APP'
+  erb :index
 end
