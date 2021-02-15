@@ -1,3 +1,11 @@
-<p>
-  I'm in a <em>view</em>!
-</p>
+
+<h1>What would you like to do?</h1>
+<% @recipes.each_with_index do |recipe, index| %>
+  <ul>
+    <li>
+      <%= index+1 %>. <%= recipe.name %>: <%= recipe.description %>
+    </li>
+  </ul>
+  <a href="/recipes/<%= index %>">Delete recipe</a>
+<% end %>
+<a href="/new">Add a new recipe</a>
